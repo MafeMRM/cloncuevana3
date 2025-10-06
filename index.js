@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const {verifyToken} = require('./utils/auth');
@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 // Importar rutas
 const authRoutes = require('./routes/authRoutes');
 const directorRoutes = require('./routes/directorRoutes');
